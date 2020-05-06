@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 防止{{}}和v-text闪烁 */
+        [v-cloak] {
+            display: none;
+        }
+
+        .item {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app" v-cloak>{{msg}}
+        <div>
+            <input type="text" v-model="info">
+            <button @click="handleClick">添加</button>
+            <ul>
+                <!-- <li v-for="item in list" v-text="item"></li> -->
+                <my-item v-for="item in list" :item="item"></my-item>
+            </ul>
+        </div>
+    </div>
+
+    <script src="../vue.js"></script>
+    <script>
+        let myvue = new Vue({
+            el: "#app",
+            data() {
+                return {
+                    msg: "hello world",
+                    info: '',
+                    list: [],
+                }
+            },
+            methods: {
+                handleClick() {
+                    this.list.push(this.info)
+                    this.info = ''
+                }
+            }
+        })
+
+        // 全局注册组件 Vue.component
+        Vue.component('my-item', {
+            template: '<li v-text="item" class="item"></li>',
+            //props: ['item'],
+            props: {
+                item: String    // Boolean, Number, Array, Object, Function, Promise...
+            }
+        })
+    </script>
+</body>
+</html>
