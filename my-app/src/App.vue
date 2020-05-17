@@ -27,7 +27,6 @@ import MyItemWithSlot from './components/MyItemSlot.vue'
 export default {
   name: 'App',
   components: {
-    // HelloWorld
     MyItem,
     MyItemWithSlot
   },

@@ -1,24 +1,17 @@
-# vuex-demo2
+# Vuex最佳实践
 
-## Project setup
-```
-npm install
-```
++ 使用 Vuex 的 mapXXX 特性
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+  + State —— this.$store.state.xxx —— mapState 取值
+  + Getter —— this.$store.getters.xxx —— mapGetters 取值
+  + Mutation —— this.$store.commit(“xxx”) —— mapMutations 赋值
+  + Action —— this.$store.dispatch(“xxx”) —— mapActions 赋值
 
-### Compiles and minifies for production
-```
-npm run build
-```
+  
 
-### Lints and fixes files
-```
-npm run lint
-```
++ 使用常量替代 Mutation 事件类型
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
++ 使用Vuex 的 Module 特性做模块化的状态拆分（需开启命名空间namespaced: true）
+

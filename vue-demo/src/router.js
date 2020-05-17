@@ -28,8 +28,13 @@ export default new Router({
         },
         {
             path: '/getData',
-            name: 'axios取数据',
+            name: '使用axios完成异步请求',
             component: () => import('./views/GetData')
+        },
+        {
+            path: '/lifeCycle',
+            name: '生命周期',
+            component: () => import('./views/lifeCycle')
         }
     ]
 })
