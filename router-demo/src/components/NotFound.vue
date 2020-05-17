@@ -1,5 +1,6 @@
 <template>
-  <div>哈哈哈
+  <div>
+    我是404
       <br/>
         <router-link to="/foo">Go to /Foo</router-link>
   </div>

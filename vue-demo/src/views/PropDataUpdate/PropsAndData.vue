@@ -5,7 +5,7 @@
       <p>props.list: {{ list }}</p>
       <p>data.a: {{ a }}</p>
       <p>
-          <button @click="handleBChange">change data.b</button>
+        <button @click="handleBChange">change data.b</button>
       </p>
   </div>
 </template>
@@ -16,6 +16,7 @@ export default {
   props: {
     info: Object,
     name: String,
+    list: Array
   },
   data() {
     return {

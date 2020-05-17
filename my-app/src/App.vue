@@ -22,7 +22,6 @@
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
 import MyItem from './components/MyItem.vue'
 import MyItemWithSlot from './components/MyItemSlot.vue'
 export default {

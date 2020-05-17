@@ -33,7 +33,7 @@ export default {
       console.log("this.name 发生了变化，但是并没有触发子组件更新，因为name声明在data return外，没有做响应式处理。可以把name的声明放入data return 解决", this.name);
     },
     handleInfoChange() {
-      // vue通过监听Object.defindeProperty中的get/set方法，实现对象的响应式
+      // vue通过实现所有Object.defindeProperty中的get/set方法，实现对象的响应式
       this.info.number = 1;
       // vm.$set(object, key, value)将响应属性添加到嵌套的对象
       // this.$set(this.info, 'number', 1)

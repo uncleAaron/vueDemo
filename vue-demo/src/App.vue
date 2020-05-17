@@ -1,17 +1,14 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <component-demo></component-demo>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import ComponentDemo from './views/ComponentDemo'
 
 export default {
   name: 'App',
   components: {
-   ComponentDemo
   },
   data () {
     return {
@@ -31,6 +28,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0px;
 }
 </style>
